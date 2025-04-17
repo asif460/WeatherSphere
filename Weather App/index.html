@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere | Real-Time Forecast</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-cloud-sun"></i> WeatherSphere</h1>
+        
+        <div class="search-container">
+            <input type="text" id="location-input" placeholder="Enter city name">
+            <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+        </div>
+        
+        <div id="loading">
+            <div class="spinner"><i class="fas fa-spinner"></i></div>
+            <p>Fetching weather data...</p>
+        </div>
+        
+        <div id="weather-card" class="weather-card">
+            <div class="weather-header">
+                <h2 id="city-name">City Name</h2>
+                <div id="current-date">Date</div>
+            </div>
+            
+            <div class="weather-main">
+                <div id="weather-icon"><i class="fas fa-sun"></i></div>
+                <div id="temperature">25°C</div>
+            </div>
+            
+            <p id="weather-description">Clear sky</p>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <i class="fas fa-tint"></i>
+                    <div>Humidity: <span id="humidity">60</span>%</div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-wind"></i>
+                    <div>Wind: <span id="wind-speed">10</span> km/h</div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-cloud"></i>
+                    <div>Clouds: <span id="clouds">20</span>%</div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-temperature-low"></i>
+                    <div>Pressure: <span id="pressure">1012</span> hPa</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="error-message">
+            <p>Unable to fetch weather data. Please try again.</p>
+            <button id="retry-btn">Retry</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
